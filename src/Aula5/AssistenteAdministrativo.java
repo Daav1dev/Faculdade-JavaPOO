@@ -1,0 +1,19 @@
+package Aula5;
+
+public class AssistenteAdministrativo extends Assistente {
+    String turno;
+    double addNoturno;
+
+    public AssistenteAdministrativo(int matricula, String turno, double addNoturno){
+        super(matricula);
+        this.turno = turno;
+        this.addNoturno = addNoturno;
+    }
+    @Override
+    public double ganhoAnual(){
+        if(turno.equals("Noite")){
+        return super.ganhoAnual()+(addNoturno*13);
+        }
+        return super.ganhoAnual();
+    }
+}
